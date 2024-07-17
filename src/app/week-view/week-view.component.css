@@ -18,3 +18,28 @@
     display: inline-block;
   }
    */
+
+   .custom-hour-segment {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .bed-container {
+    display: flex;
+    width: 100%;
+  }
+  
+  .bed {
+    width: 50%;
+    border-right: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  .bed:last-child {
+    border-right: none;
+  }
+  
+  .event-card {
+    margin: 2px;
+  }
+  

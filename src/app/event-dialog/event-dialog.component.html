@@ -8,8 +8,28 @@
     <mat-label>Phone Number</mat-label>
     <input matInput [(ngModel)]="data.event.meta.phone" required>
   </mat-form-field>
+  <mat-form-field>
+    <mat-label>Bed</mat-label>
+    <input matInput [(ngModel)]="data.event.meta.bed" required>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>End Time</mat-label>
+    <mat-select [(ngModel)]="data.event.meta.duration">
+      <mat-option [value]="60">1 hour</mat-option>
+      <mat-option [value]="90">1 hour and a half</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Deposit</mat-label>
+    <input matInput [(ngModel)]="data.event.meta.deposit" required>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Additional Payment</mat-label>
+    <input matInput [(ngModel)]="data.event.meta.additional" required>
+  </mat-form-field>
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onCancel()">Cancel</button>
-  <button mat-button (click)="onSave()" [disabled]="!data.event.title || !data.event.meta.phone">Save</button>
+  <button mat-button (click)="onSave()" [disabled]="!data.event.title || !data.event.meta.phone || !data.event.meta.bed || !data.event.meta.deposit || !data.event.meta.additional">Save</button>
+  <button *ngIf="data.isEdit" mat-button (click)="onDelete()">Delete</button>
 </div>

@@ -1,41 +1,62 @@
 [
   {
-    "title": "Event 1",
-    "start": "2024-07-16T10:00:00",
-    "end": "2024-07-16T12:00:00",
-    "color": {
-      "primary": "#1e90ff",
-      "secondary": "#D1E8FF"
-    },
-    "meta": {
-      "phone": "123-456-7890",
-      "bed": 1
-    }
+      "title": "Event 1",
+      "start": "2024-07-16T10:00:00",
+      "end": "2024-07-16T12:00:00",
+      "color": {
+          "primary": "#1e90ff",
+          "secondary": "#D1E8FF"
+      },
+      "meta": {
+          "phone": "123-456-7890",
+          "bed": 1,
+          "deposit": "50",
+          "additional": "20"
+      }
   },
   {
-    "title": "Event 2",
-    "start": "2024-07-17T14:00:00",
-    "end": "2024-07-17T15:30:00",
-    "color": {
-      "primary": "#ff5733",
-      "secondary": "#FFC300"
-    },
-    "meta": {
-      "phone": "098-765-4321",
-      "bed": 2
-    }
+      "title": "Event 2",
+      "start": "2024-07-17T14:00:00",
+      "end": "2024-07-17T15:30:00",
+      "color": {
+          "primary": "#ff5733",
+          "secondary": "#FFC300"
+      },
+      "meta": {
+          "phone": "098-765-4321",
+          "bed": 2,
+          "deposit": "30",
+          "additional": "10"
+      }
   },
   {
-    "title": "Event 3",
-    "start": "2024-07-17T14:00:00",
-    "end": "2024-07-17T15:30:00",
-    "color": {
-      "primary": "#ff5733",
-      "secondary": "#FFC300"
-    },
-    "meta": {
-      "phone": "098-765-4321",
-      "bed": 2
-    }
+      "title": "Event 3",
+      "start": "2024-07-18T09:00:00",
+      "end": "2024-07-18T10:00:00",
+      "color": {
+          "primary": "#34a853",
+          "secondary": "#B7E1CD"
+      },
+      "meta": {
+          "phone": "234-567-8901",
+          "bed": 1,
+          "deposit": "40",
+          "additional": "15"
+      }
+  },
+  {
+      "title": "Event 4",
+      "start": "2024-07-19T11:00:00",
+      "end": "2024-07-19T12:30:00",
+      "color": {
+          "primary": "#4285F4",
+          "secondary": "#D2E3FC"
+      },
+      "meta": {
+          "phone": "345-678-9012",
+          "bed": 2,
+          "deposit": "60",
+          "additional": "25"
+      }
   }
 ]

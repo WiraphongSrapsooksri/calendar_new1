@@ -20,6 +20,8 @@ import { EventDialogComponent } from './event-dialog/event-dialog.component';
 import { EventFormComponent } from './event-form/event-form.component';
 // import { FilterEventsPipe } from './filter-events.pipe';
 import { WeekViewComponent } from './week-view/week-view.component';
+import {MatSelectModule} from '@angular/material/select';
+import {MatCardModule} from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +45,8 @@ import { WeekViewComponent } from './week-view/week-view.component';
     HttpClientModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatSelectModule,
+    MatCardModule,
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory,
