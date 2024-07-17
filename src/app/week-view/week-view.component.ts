@@ -12,11 +12,10 @@ import { EventService } from '../event.service';
   styleUrls: ['./week-view.component.css']
 })
 export class WeekViewComponent implements OnInit {
-  // @ViewChild('eventTemplate', { static: true }) eventTemplate!: TemplateRef<any>;
-
   viewDate: Date = new Date();
   events: CalendarEvent[] = [];
   refresh: Subject<any> = new Subject();
+  @ViewChild('eventTemplate', { static: true }) eventTemplate!: TemplateRef<any>;
 
   constructor(private dialog: MatDialog, private eventService: EventService) {}
 
@@ -138,6 +137,10 @@ export class WeekViewComponent implements OnInit {
         this.addEvent(result.event);
       }
     });
+  }
+
+  getEventsForBed(date: Date, bed: number): CalendarEvent[] {
+    return this.events.filter(event => event.start.getDate() === date.getDate() && event.meta?.bed === bed);
   }
 
   previousWeek(): void {

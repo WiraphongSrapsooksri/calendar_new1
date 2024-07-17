@@ -30,20 +30,20 @@
       }
   },
   {
-      "title": "Event 3",
-      "start": "2024-07-18T09:00:00",
-      "end": "2024-07-18T10:00:00",
-      "color": {
-          "primary": "#34a853",
-          "secondary": "#B7E1CD"
-      },
-      "meta": {
-          "phone": "234-567-8901",
-          "bed": 1,
-          "deposit": "40",
-          "additional": "15"
-      }
-  },
+    "title": "Max",
+    "start": "2024-07-17T14:00:00",
+    "end": "2024-07-17T15:30:00",
+    "color": {
+        "primary": "#ff5733",
+        "secondary": "#FFC300"
+    },
+    "meta": {
+        "phone": "098-765-4321",
+        "bed": 1,
+        "deposit": "30",
+        "additional": "10"        
+    }
+},
   {
       "title": "Event 4",
       "start": "2024-07-19T11:00:00",

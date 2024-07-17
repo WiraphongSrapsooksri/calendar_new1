@@ -18,28 +18,94 @@
     display: inline-block;
   }
    */
+/* week-view.component.css */
+/* week-view.component.css */
+.sidenav-container {
+  height: 100%;
+}
 
-   .custom-hour-segment {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .bed-container {
-    display: flex;
-    width: 100%;
-  }
-  
-  .bed {
-    width: 50%;
-    border-right: 1px solid #ccc;
-    cursor: pointer;
-  }
-  
-  .bed:last-child {
-    border-right: none;
-  }
-  
-  .event-card {
-    margin: 2px;
-  }
-  
+.sidenav-content {
+  height: 100%;
+}
+
+.custom-event {
+  cursor: pointer;
+  padding: 5px;
+  margin: 2px;
+  color: white;
+  background-color: #1e90ff;
+}
+
+.bed-1 {
+  background-color: #1e90ff;
+}
+
+.bed-2 {
+  background-color: #ff6347;
+}
+
+.mwl-calendar-week-view-hour-segment {
+  position: relative;
+}
+
+.mwl-calendar-week-view-hour-segment .custom-event {
+  position: absolute;
+  width: 50%; /* Adjust this value as necessary */
+}
+
+.mwl-calendar-week-view-hour-segment .bed-1 {
+  left: 0;
+}
+
+.mwl-calendar-week-view-hour-segment .bed-2 {
+  right: 0;
+}
+
+
+::ng-deep .cal-event-container {
+  width:100% !important;
+}
+
+/* .event-card{
+  "width:{{ 100 / weekEvent?.event?.meta?.eventInSlot}}%" 
+} */
+
+
+/* .event-container {
+  display: flex;
+  width: 100%;
+  padding: 2px;
+}
+
+.bed-1 {
+  width: 50%;
+  order: 1;
+  background-color: #e6f8eb;
+  color: #00ba34;
+}
+
+.bed-2 {
+  width: 50%;
+  order: 2;
+}
+
+
+.event-card {
+  margin: 5px;
+}
+ */
+
+ .event-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.event-wrapper {
+  flex-basis: 45%; /* ใช้พื้นที่ 45% ของคอลัมน์ เพื่อให้มีระยะห่างระหว่างกัน */
+}
+
+.event-card {
+  width: 100%;
+  margin: 5px;
+}

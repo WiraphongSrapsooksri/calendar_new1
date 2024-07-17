@@ -62,30 +62,44 @@
 
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav-content class="sidenav-content">
-    <mwl-calendar-week-view
-      [viewDate]="viewDate"
-      [events]="events"
-      [dayStartHour]="11"
-      [dayEndHour]="20"
-      (eventClicked)="handleEventClicked($event.event)"
-      (hourSegmentClicked)="handleHourSegmentClicked($event)"
-      [hourSegmentHeight]="40"
-      [hourSegments]="2"
-      (beforeViewRender)="beforeViewRender($event)"
-      [refresh]="refresh"
+    <mwl-calendar-week-view [viewDate]="viewDate" [events]="events" [dayStartHour]="11" [dayEndHour]="20"
+      (eventClicked)="handleEventClicked($event.event)" (hourSegmentClicked)="handleHourSegmentClicked($event)"
+      [hourSegmentHeight]="40" [hourSegments]="2" (beforeViewRender)="beforeViewRender($event)" [refresh]="refresh"
+      [eventTemplate]="eventTemplate" />
+    <ng-template #eventTemplate let-weekEvent="weekEvent">
+
+      <div class="event-container">
+        <div *ngIf="weekEvent?.event?.meta?.bed === 1" class="event-wrapper">
+          <mat-card class="event-card bed-1">
+            <mat-card-title>{{ weekEvent?.event?.title }}</mat-card-title>
+            <mat-card-content>
+              <p>{{ weekEvent?.event?.meta?.phone }}</p>
+              <p>{{ weekEvent?.event?.meta?.deposit }}</p>
+              <p>{{ weekEvent?.event?.meta?.additional }}</p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div *ngIf="weekEvent?.event?.meta?.bed === 2" class="event-wrapper">
+          <mat-card class="event-card bed-2">
+            <mat-card-title>{{ weekEvent?.event?.title }}</mat-card-title>
+            <mat-card-content>
+              <p>{{ weekEvent?.event?.meta?.phone }}</p>
+              <p>{{ weekEvent?.event?.meta?.deposit }}</p>
+              <p>{{ weekEvent?.event?.meta?.additional }}</p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
       
-    >
-    </mwl-calendar-week-view>
-    
-    <ng-template #eventTemplate let-event="event">
-      <mat-card class="event-card">
-        <mat-card-title>{{ event.title }}</mat-card-title>
+
+      <!-- <mat-card class="event-card" style="width:{{100*weekEvent?.event?.meta?.bed}};">
+        <mat-card-title>{{ weekEvent?.event?.title }}</mat-card-title>
         <mat-card-content>
-          <p>{{ event.meta?.phone }}</p>
-          <p>Deposit: {{ event.meta?.deposit }}</p>
-          <p>Additional: {{ event.meta?.additional }}</p>
+          <p>{{weekEvent?.event?.meta?.phone}}</p>
+          <p>{{weekEvent?.event?.meta?.deposit}}</p>
+          <p>{{weekEvent?.event?.meta?.Additional}}</p>
         </mat-card-content>
-      </mat-card>
+      </mat-card> -->
     </ng-template>
   </mat-sidenav-content>
 </mat-sidenav-container>

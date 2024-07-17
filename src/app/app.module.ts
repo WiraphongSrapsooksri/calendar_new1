@@ -22,6 +22,7 @@ import { EventFormComponent } from './event-form/event-form.component';
 import { WeekViewComponent } from './week-view/week-view.component';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCardModule} from '@angular/material/card';
+import { MenuDialogComponent } from './menu-dialog/menu-dialog.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +30,7 @@ import {MatCardModule} from '@angular/material/card';
     DayViewComponent,
     EventFormComponent,
     EventDialogComponent,
+    MenuDialogComponent,
     // FilterEventsPipe
   ],
   imports: [
