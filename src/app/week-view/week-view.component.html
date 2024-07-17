@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+  <button mat-button (click)="previousWeek()">Previous</button>
+  <button mat-button (click)="nextWeek()">Next</button>
+</mat-toolbar>
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav-content class="sidenav-content">
+    <mwl-calendar-week-view
+      [viewDate]="viewDate"
+      [events]="events"
+      [dayStartHour]="11"
+      [dayEndHour]="20"
+      (eventClicked)="handleEventClicked($event.event)"
+      (hourSegmentClicked)="handleHourSegmentClicked($event)"
+      [hourSegmentHeight]="40"
+    ></mwl-calendar-week-view>
+  </mat-sidenav-content>
+</mat-sidenav-container>

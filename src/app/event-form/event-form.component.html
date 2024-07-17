@@ -1,0 +1,12 @@
+<form (ngSubmit)="onSubmit()" #eventForm="ngForm">
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Name" required name="name" [(ngModel)]="eventName">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Phone Number</mat-label>
+      <input matInput placeholder="Phone Number" required name="phone" [(ngModel)]="eventPhone">
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Add Event</button>
+  </form>
+  

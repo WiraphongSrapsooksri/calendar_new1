@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>{{data.isEdit ? 'Edit Event' : 'Add Event to '}}{{data.event.meta.titleshowdate}}</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput [(ngModel)]="data.event.title" required>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Phone Number</mat-label>
+    <input matInput [(ngModel)]="data.event.meta.phone" required>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button (click)="onSave()" [disabled]="!data.event.title || !data.event.meta.phone">Save</button>
+</div>
